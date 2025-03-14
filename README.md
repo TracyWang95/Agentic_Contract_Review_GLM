@@ -2,7 +2,7 @@
 
 ## 项目简介
 
-Agentic_Contract_Review_GLM 是一个基于人工智能的合同审查工作流项目，旨在自动化审查合同是否符合特定的法规要求（以GDPR为例）。该项目通过解析合同中的关键条款，并与法规库中的相关条款进行匹配，生成合规性报告。本项目基于LlamaIndex项目二开而来，避免使用了LlamaParse这一组件。项目使用了LlamaIndex、VectorStoreIndex和OpenParses、智源bge-small-en-v1.5嵌入模型以及智谱AI GLM模型，其中VectorStoreIndex、OpenPares、bge-small-en-v1.5均为开源组件，GLM模型为API调用（也可以切换成GLM-9B开源模型以实现全量本地化部署），实现智能审核功能。
+Agentic_Contract_Review_GLM 是一个基于人工智能的合同审查工作流项目，旨在自动化审查合同是否符合特定的法规要求（以GDPR为例）。该项目通过解析合同中的关键条款，并与法规库中的相关条款进行匹配，生成合规性报告。本项目基于LlamaIndex项目二开而来，同时避免使用了LlamaParse这一SaaS组件。项目使用了LlamaIndex、VectorStoreIndex和OpenParses、智源bge-small-en-v1.5嵌入模型以及智谱AI GLM模型，其中VectorStoreIndex、OpenPares、bge-small-en-v1.5均为开源组件，GLM模型为API调用（也可以切换成GLM-9B开源模型以实现全量本地化部署），实现智能审核功能。
 
 ## 主要业务功能
 
