@@ -86,7 +86,7 @@ pip install llama_index.llms.zhipuai
 
    #### 类与功能详解
 
-   #### 1. **ContractClause 类**
+   #### a. **ContractClause 类**
 
    `ContractClause` 类用于表示合同中的单个条款。每个条款包含以下字段：
 
@@ -97,7 +97,7 @@ pip install llama_index.llms.zhipuai
    - **specifies_purpose**：是否明确指定数据处理或传输的目的。
    - **mentions_safeguards**：是否提及数据的安全措施或其他保护措施。
    
-   #### 2. **ContractExtraction 类**
+   #### b. **ContractExtraction 类**
 
    `ContractExtraction` 类用于表示从合同中提取的结构化数据。包含以下字段：
 
@@ -106,7 +106,7 @@ pip install llama_index.llms.zhipuai
    - **governing_law**：合同的管辖法律（如果声明）。
    - **clauses**：从合同中提取的条款列表。
    
-   #### 3. **GuidelineMatch 类**
+   #### c. **GuidelineMatch 类**
    
    `GuidelineMatch` 类用于表示与合同条款匹配的 GDPR 指南。包含以下字段：
    
@@ -114,7 +114,7 @@ pip install llama_index.llms.zhipuai
    - **similarity_score**：指南与条款的相似度评分（0 到 1 之间）。
    - **relevance_explanation**：指南与条款相关性的简要解释。
    
-   #### 4. **ClauseComplianceCheck 类**
+   #### d. **ClauseComplianceCheck 类**
    
    `ClauseComplianceCheck` 类用于表示合同条款的合规性检查结果。包含以下字段：
    
@@ -123,7 +123,7 @@ pip install llama_index.llms.zhipuai
    - **compliant**：条款是否符合 GDPR 要求。
    - **notes**：附加的注释或建议。
    
-   #### 5. **ComplianceReport 类**
+   #### e. **ComplianceReport 类**
    
    `ComplianceReport` 类用于表示最终的合规性报告。包含以下字段：
    
@@ -131,7 +131,7 @@ pip install llama_index.llms.zhipuai
    - **overall_compliant**：合同是否总体符合 GDPR 要求。
    - **summary_notes**：对合同合规性的总结和建议。
    
-   #### 6. **ContractReviewWorkflow 类**
+   #### f. **ContractReviewWorkflow 类**
    
    `ContractReviewWorkflow` 类是合同审查工作流的核心类，负责整个审查流程的执行。主要方法包括：
    
@@ -150,7 +150,7 @@ from llama_index.utils.workflow import draw_all_possible_flows
 draw_all_possible_flows(ContractReviewWorkflow, filename="contract_workflow.html")
 ```
    
-5. **运行工作流**：
+5. **运行工作流**
 
    通过以下命令运行合同审查工作流：
 
