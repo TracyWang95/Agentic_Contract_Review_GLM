@@ -141,7 +141,7 @@ pip install llama_index.llms.zhipuai
    - **gather_guideline_match**：收集所有条款的合规性检查结果。
    - **generate_output**：生成最终的合规性报告。
 
-5. **可视化工作流**
+4. **可视化工作流**
 
 项目还支持将工作流可视化，生成 HTML 文件以便更好地理解工作流的执行过程：
 
@@ -150,7 +150,7 @@ from llama_index.utils.workflow import draw_all_possible_flows
 draw_all_possible_flows(ContractReviewWorkflow, filename="contract_workflow.html")
 ```
    
-6. **运行工作流**：
+5. **运行工作流**：
 
    通过以下命令运行合同审查工作流：
 
@@ -202,8 +202,6 @@ Step handle_guideline_match produced event MatchGuidelineResultEvent
 - **总体合规性**：合同是否总体符合 GDPR 要求。
 - **总结说明**：对合同合规性的总结和建议。
 
-示例输出：
-
 ```json
 {
   "vendor_name": "Example Vendor",
@@ -212,7 +210,7 @@ Step handle_guideline_match produced event MatchGuidelineResultEvent
 }
 ```
 
-查看non-compliance结果：
+## 查看non-compliance结果：
 
 [ClauseComplianceCheck(clause_text='Vendor may transfer data to any country where it maintains operations', matched_guideline=GuidelineMatch(guideline_text='A group of undertakings, or a group of enterprises engaged in a joint economic activity, should be able to make use of approved binding corporate rules for its international transfers from the Union to organisations within the same group of undertakings, or group of enterprises engaged in a joint economic activity, provided that such corporate rules include all essential principles and enforceable rights to ensure appropriate safeguards for transfers or categories of transfers of personal data.', similarity_score=0.7, relevance_explanation='The guideline discusses international transfers of data and the use of corporate rules to ensure appropriate safeguards, which is relevant to the clause allowing data transfers to any country where the vendor maintains operations.'), compliant=False, notes="The clause does not specify any safeguards or conditions for data transfers, which may not align with the guideline's recommendation for additional safeguards via contractual commitments. It is recommended to review and update the clause to ensure compliance with the guideline."), ClauseComplianceCheck(clause_text='Vendor may engage subprocessors without prior Client approval', matched_guideline=GuidelineMatch(guideline_text='Where a processor engages another processor for carrying out specific processing activities on behalf of the controller, the same data protection obligations as set out in the contract or other legal act between the controller and the processor shall be imposed on that other processor by way of a contract or other legal act under Union or Member State law, in particular providing sufficient guarantees to implement appropriate technical and organisational measures in such a manner that the processing will meet the requirements of this Regulation.', similarity_score=0.8, relevance_explanation='The guideline addresses the engagement of subprocessors and the need to impose data protection obligations on them, which is directly relevant to the clause.'), compliant=False, notes='The clause is not compliant with the guideline as it allows the vendor to engage subprocessors without prior client approval, which may not meet the data protection obligations and guarantees required by the regulation.')]
   
